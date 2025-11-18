@@ -4,7 +4,7 @@ descending order by value. If two or more have the same value, order by
 product name.
 SELECT UnitPrice * UnitsInStock AS inventory_value,  productID, ProductName
 FROM `northwind`.products
-GROUP BY productID, productName, inventory_value;
+ORDER BY inventory_value DESC, ProductName;
 4479.5000	38	Cte de Blaye
 4345.0000	59	Raclette Courdavault
 3268.0000	12	Queso Manchego La Pastora
@@ -77,8 +77,8 @@ GROUP BY productID, productName, inventory_value;
 47.5000	45	Rogede sild
 40.0000	74	Longlife Tofu
 30.0000	21	Sir Rodney's Scones
-0.0000	5	Chef Anton's Gumbo Mix
 0.0000	17	Alice Mutton
-0.0000	29	Thringer Rostbratwurst
+0.0000	5	Chef Anton's Gumbo Mix
 0.0000	31	Gorgonzola Telino
 0.0000	53	Perth Pasties
+0.0000	29	Thringer Rostbratwurst
